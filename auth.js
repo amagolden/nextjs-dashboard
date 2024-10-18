@@ -4,6 +4,7 @@ import Credentials from 'next-auth/providers/credentials';
 import { z } from 'zod';
 import { sql } from '@vercel/postgres';
 import bcrypt from 'bcrypt';
+
 async function getUser(email) {
   try {
     const user = await sql`SELECT * FROM users WHERE email=${email}`;
@@ -15,6 +16,7 @@ async function getUser(email) {
 }
 export const { auth, signIn, signOut } = NextAuth({
   ...authConfig,
+  secret: process.env.AUTH_SECRET,
   providers: [
     Credentials({
       async authorize(credentials) {
