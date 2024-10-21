@@ -1,8 +1,18 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Getting Started Production
 
-First, run the development server:
+To see the live app, visit: nextjs-dashboard-two-xi-93.vercel.app
+
+Login with test user credentials to view the dashboard:
+email: user@nextmail.com
+password: 123456
+
+From there, you can view a demo of the dashboard deployed on vercel.
+
+## Getting Started Development
+
+To run this dashboard locally, first, run the development server:
 
 ```bash
 npm run dev
